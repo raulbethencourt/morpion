@@ -11,13 +11,14 @@
     max-width: 600px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;   
+    margin: auto;
+    margin-top: 10%;   
 }
 
 .case {
     width: 200px;
     height: 200px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 6px solid rgb(0, 0, 0);
     text-align: center;
     font-size: 7em;
     padding-top: 5%;
