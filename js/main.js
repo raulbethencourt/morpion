@@ -1,20 +1,24 @@
+//Ready function to securing good charging
 $(document).ready(function () {
 
-    $("#player1").css("text-decoration", "underline");
-    
+    //Click event to make the game works
     $('.case').click(function () {
 
+        //Set beginning to player 1
         if (count % 2) {
 
+            //After first click indicate player 2 tour 
             $("#player2").css("text-decoration", "underline");
             $("#player1").css("text-decoration", "none");
-            
+
+            //Set players 1 symbols in game
             $(this).append(player1);
             $(this).css({
                 "background-color": "red",
                 "border-color": "red"
             });
 
+            //Set horizontal choices
             if (+$(this).attr("id") == 1) {
                 v1_h1 += 1
             }
@@ -25,6 +29,7 @@ $(document).ready(function () {
                 v1_h3 += 1
             }
 
+            //Set vertical choices
             if (+$(this).attr("coords") == 1) {
                 v1_v1 += 1
             }
@@ -35,26 +40,24 @@ $(document).ready(function () {
                 v1_v3 += 1
             }
 
+            //Set diagonal choices
             if (+$(this).attr("coords") == 2 && +$(this).attr("id") == 2) {
                 v1_d_c = 1;
             }
-
             if (+$(this).attr("coords") == 1 && +$(this).attr("id") == 1) {
                 v1_d_r += 1;
             }
-
             if (+$(this).attr("coords") == 3 && +$(this).attr("id") == 3) {
                 v1_d_r += 1;
             }
-
             if (+$(this).attr("coords") == 3 && +$(this).attr("id") == 1) {
                 v1_d_l += 1;
             }
-
             if (+$(this).attr("coords") == 1 && +$(this).attr("id") == 3) {
                 v1_d_l += 1;
             }
 
+            //Set players 1 victory
             if ((v1_d_c === 1 && v1_d_r === 2) ||
                 (v1_d_c === 1 && v1_d_l === 2) ||
                 (v1_v1 === 3 || v1_v2 === 3 || v1_v3 === 3) ||
@@ -67,9 +70,10 @@ $(document).ready(function () {
             }
         } else {
 
+            //Same thing with player 2
             $("#player1").css("text-decoration", "underline");
             $("#player2").css("text-decoration", "none");
-            
+
             $(this).append(player2);
             $(this).css({
                 "background-color": "black",
@@ -99,19 +103,15 @@ $(document).ready(function () {
             if (+$(this).attr("coords") == 2 && +$(this).attr("id") == 2) {
                 v2_d_c = 1;
             }
-
             if (+$(this).attr("coords") == 1 && +$(this).attr("id") == 1) {
                 v2_d_r += 1;
             }
-
             if (+$(this).attr("coords") == 3 && +$(this).attr("id") == 3) {
                 v2_d_r += 1;
             }
-
             if (+$(this).attr("coords") == 3 && +$(this).attr("id") == 1) {
                 v2_d_l += 1;
             }
-
             if (+$(this).attr("coords") == 1 && +$(this).attr("id") == 3) {
                 v2_d_l += 1;
             }
@@ -128,7 +128,10 @@ $(document).ready(function () {
             };
         };
 
+        //Count decreasing each click
         count--;
+
+        //Match null settings
         if (count == 0 && v1 === false && v2 === false) {
             $("#table").hide();
             $("#player1").hide();
@@ -137,6 +140,10 @@ $(document).ready(function () {
         }
     });
 
+    //Set starter player indication
+    $("#player1").css("text-decoration", "underline");
+
+    //All variables and constants
     const player1 = '<i class="fas fa-expand-arrows-alt"></i>';
     const player2 = '<i class="fas fa-circle-notch"></i>';
     let count = 9;
