@@ -182,13 +182,13 @@ h1 {
     }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 350px) {
     body {
         margin-top: 0em;
     }
 
     #wrapper {
-        height: 400px;
+        height: 450px;
         display: flex;
         flex-direction: column;
     }
@@ -196,10 +196,12 @@ h1 {
     #player1 {
         width: 300px;
         height: 70px;
+        padding-top: 5%;
     }
 
     #player2 {
         width: 300px;
         height: 70px;
+        padding-top: 5%;
     }
 }
