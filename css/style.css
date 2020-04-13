@@ -2,17 +2,24 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0em;
+}
+
 #wrapper {
     max-width: 1500px;
+    height: 900px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #table {
-    max-width: 600px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    margin-top: 10%;   
 }
 
 .case {
@@ -26,4 +33,171 @@
 
 .case:hover {
     cursor: pointer;
+}
+
+#player1 {
+    background-color: red;
+    width: 30%;
+    height: 600px;
+    text-align: center;
+    padding-top: 18%;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#player2 {
+    background-color: black;
+    color: red;
+    width: 30%;
+    height: 600px;
+    text-align: center;
+    padding-top: 18%;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#continue {
+    background-color: red;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4em;
+    margin-left: auto;
+}
+
+#continue:hover {
+    cursor: pointer;
+}
+
+.victory {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+@media all and (max-width: 1100px) {
+
+    #wrapper {
+        max-width: 1500px;
+        height: 750px;
+    }
+
+    #table {
+        width: 450px;
+    }
+
+    .case {
+        width: 150px;
+        height: 150px;
+        font-size: 5em;
+    }
+
+    #player1 {
+        width: 20%;
+        height: 450px;
+        font-size: 35px;
+    }
+
+    #player2 {
+        width: 20%;
+        height: 450px;
+        font-size: 35px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    body {
+        margin-top: 10px;
+    }
+
+    #wrapper {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #player1 {
+        width: 450px;
+    }
+
+    #player2 {
+        width: 450px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    #wrapper {
+        height: 360px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #table {
+        width: 300px;
+    }
+
+    .case {
+        width: 100px;
+        height: 100px;
+        font-size: 3em;
+    }
+
+    #player1 {
+        height: 300px;
+        width: 150px;
+        font-size: 30px;
+    }
+
+    #player2 {
+        height: 300px;
+        width: 150px;
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    body {
+        margin-top: 20px;
+    }
+
+    #wrapper {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #player1 {
+        width: 300px;
+    }
+
+    #player2 {
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    body {
+        margin-top: 0em;
+    }
+
+    #wrapper {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #player1 {
+        width: 300px;
+    }
+
+    #player2 {
+        width: 300px;
+    }
 }
