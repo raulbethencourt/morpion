@@ -7,16 +7,16 @@ $(document).ready(function () {
         //Set beginning to player 1
         if (count % 2) {
 
-            //After first click indicate player 2 tour 
-            $("#player2").css("text-decoration", "underline");
-            $("#player1").css("text-decoration", "none");
-
             //Set players 1 symbols in game
             $(this).append(player1);
             $(this).css({
                 "background-color": "red",
                 "border-color": "red"
             });
+
+            //After first click indicate player 2 tour 
+            $("#player2").css("text-decoration", "underline");
+            $("#player1").css("text-decoration", "none");
 
             //Set horizontal choices
             if (+$(this).attr("id") == 1) {
@@ -71,14 +71,14 @@ $(document).ready(function () {
         } else {
 
             //Same thing with player 2
-            $("#player1").css("text-decoration", "underline");
-            $("#player2").css("text-decoration", "none");
-
             $(this).append(player2);
             $(this).css({
                 "background-color": "black",
                 "color": "red"
             });
+            
+            $("#player1").css("text-decoration", "underline");
+            $("#player2").css("text-decoration", "none");
 
             if (+$(this).attr("id") == 1) {
                 v2_h1 += 1
