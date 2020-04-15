@@ -80,7 +80,7 @@ h1 {
     font-size: 4em;
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1200px) {
 
     #wrapper {
         max-width: 1500px;
@@ -110,7 +110,7 @@ h1 {
     }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 992px) {
     body {
         margin-top: 10px;
     }
@@ -130,7 +130,7 @@ h1 {
     }
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
     #wrapper {
         height: 360px;
         display: flex;
@@ -162,7 +162,7 @@ h1 {
     }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 576px) {
     body {
         margin-top: 20px;
     }
